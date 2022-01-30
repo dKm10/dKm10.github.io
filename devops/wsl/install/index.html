@@ -2,7 +2,9 @@
 <html lang="en-us">
   <head><link rel="icon" href="/favicon_main.svg"><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta http-equiv="x-ua-compatible" content="ie=edge" /><title>Tech Blogs by dKm! - WSL</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta property="og:url"  content="https://dkm10.github.io/devops/wsl/install/" />
+    <meta property="og:type" content="article" /><meta property="og:title" content="Install WSL/2" /><meta property="og:description" content="Quick guide on how to install WSL on Windows" /><meta property="og:image:width"  content="375" />
+        <meta property="og:image:height" content="250" /><meta property="og:image" content="https://dkm10.github.io/images/default_summary_hu3efed0aef410d547b50a5d76aed712c3_1591773_600x0_resize_q75_box.jpg" /><title>Tech Blogs by dKm! - Install WSL/2</title>
 
     
 <link href="https://fonts.googleapis.com/css?family=Open&#43;Sans" rel="stylesheet">
@@ -130,60 +132,38 @@
     </div>
   </nav>
 <section class="section is-medium">
-        <div class="container">
-          
-            
-              <h1 class="title section-title">WSL</h1>
-              <h5 class="subtitle is-5 is-muted"></h5>
-              <div class="divider"></div>        
-              <div class="section is-small">
-                <div class="columns">
-                    <div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/devops/wsl/configure/">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title is-2 section-title">Install WSL/2</h1>
+        <h5 class="subtitle is-5 is-muted"></h5>
+        <div class="divider"></div>
         
-          <img src="/images/default_summary_hu3efed0aef410d547b50a5d76aed712c3_1591773_600x0_resize_q75_box.jpg" alt="">
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        Configure WSL
-      </h3>
-      <p class="refresh-summary">Quick guide on how to configure WSL and Ubuntu on Windows</p> 
-      <div class="action has-text-right">
-        <a href="/devops/wsl/configure/" class="button is-primary">
-                Read more
-            </a>
-      </div>
-    </div>
-  </div>
-<div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/devops/wsl/install/">
-        
-          <img src="/images/default_summary_hu3efed0aef410d547b50a5d76aed712c3_1591773_600x0_resize_q75_box.jpg" alt="">
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        Install WSL/2
-      </h3>
-      <p class="refresh-summary">Quick guide on how to install WSL on Windows</p> 
-      <div class="action has-text-right">
-        <a href="/devops/wsl/install/" class="button is-primary">
-                Read more
-            </a>
-      </div>
-    </div>
-  </div>
+        <section class="section content has-text-justified">
+          <p>Windows Subsytem for Linux (WSL) lets you run a GNU/Linux environment within your windows system without using a virtual machine. You can run most of your favourite Linux tools/utilities like grep,vim, etc. and also run shell scripts directly from your windows terminal.
+<!-- raw HTML omitted --></p>
+<h3 id="pre-requisites">Pre-Requisites</h3>
+<p>You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11.</p>
+<h3 id="install">Install</h3>
+<p>You can now install WSL on windows using a single command from PowerShell (run as administrator).</p>
+<p><code>wsl --install</code></p>
+<p>Above command will install all optional components along with a default distribution (Ubuntu).<!-- raw HTML omitted -->
+When you launch your distribution for the first time, it&rsquo;s going to de-compress all the files to save on your machine. This will take some time. Subsequent launches should be quick.<!-- raw HTML omitted -->
+In case you want to install a different distribution, you can tweak the command like this</p>
+<ul>
+<li>To change the distribution installed, enter: <code>wsl --install -d &lt;Distribution Name&gt;</code>. Replace <!-- raw HTML omitted --> with the name of the distribution you would like to install.</li>
+<li>To see a list of available Linux distributions available for download through the online store, enter: wsl &ndash;list &ndash;online or wsl -l -o.</li>
+<li>To install additional Linux distributions after the initial install, you may also use the command: wsl &ndash;install -d <!-- raw HTML omitted -->.</li>
+</ul>
+<p>For more details on WSL installation, you can refer to <a href="https://docs.microsoft.com/en-us/windows/wsl/install">Microsoft documentation</a></p>
+<p>If you want to manually install WSL on older versions of windows, you can refer to <a href="https://docs.microsoft.com/en-us/windows/wsl/install-manual">this doc</a></p>
 
-                  </div>
-                
-              </div>
-            
-          
-        </div>
-    </section><footer class="footer footer-dark">
+        </section>
+      </div>
+    </div>
+  </div>  
+  </section>
+<footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
       <div class="column">
