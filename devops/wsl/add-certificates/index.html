@@ -2,9 +2,9 @@
 <html lang="en-us">
   <head><link rel="icon" href="/favicon_main.svg"><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta property="og:url"  content="https://dkm10.github.io/devops/wsl/configure/" />
-    <meta property="og:type" content="article" /><meta property="og:title" content="Configure WSL" /><meta property="og:description" content="Quick guide on how to configure WSL and Ubuntu on Windows" /><meta property="og:image:width"  content="375" />
-        <meta property="og:image:height" content="250" /><meta property="og:image" content="https://dkm10.github.io/images/default_summary_hu3efed0aef410d547b50a5d76aed712c3_1591773_600x0_resize_q75_box.jpg" /><title>Tech Blogs by dKm! - Configure WSL</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta property="og:url"  content="https://dkm10.github.io/devops/wsl/add-certificates/" />
+    <meta property="og:type" content="article" /><meta property="og:title" content="Install certificates in WSL/2" /><meta property="og:description" content="Install certificates in wsl to work with proxy" /><meta property="og:image:width"  content="375" />
+        <meta property="og:image:height" content="250" /><meta property="og:image" content="https://dkm10.github.io/images/default_summary_hu3efed0aef410d547b50a5d76aed712c3_1591773_600x0_resize_q75_box.jpg" /><title>Tech Blogs by dKm! - Install certificates in WSL/2</title>
 
     
 <link href="https://fonts.googleapis.com/css?family=Open&#43;Sans" rel="stylesheet">
@@ -135,23 +135,18 @@
   <div class="container">
     <div class="columns">
       <div class="column is-centered-tablet-portrait">
-        <h1 class="title is-2 section-title">Configure WSL</h1>
+        <h1 class="title is-2 section-title">Install certificates in WSL/2</h1>
         <h5 class="subtitle is-5 is-muted"></h5>
         <div class="divider"></div>
         
         <section class="section content has-text-justified">
-          <p>After installing your preferred distro in WSL, you would want to configure it with tools to suit your DevOps workflow. I personally work a lot with Azure, Terraform and Azure DevOps. I like to setup my WSL instance with all the tools/utilities that can help with my routine tasks.</p>
-<p>Installing and configuring each tool can take a lot of time. To make things easy, I have written an ansible playbook that configures my WSL instance with all the configuration that I need. This helps me get started with my work on any new instance in minutes. I tweak this playbook every now and then to suit my current workflow.</p>
-<p>Ansible playbook is hosted on my <a href="https://github.com/dKm10/wsl-ubuntu-setup">GitHub</a></p>
-<p>First thing that you should do after installing your WSL distro is to update all the packages. You can do that by running the following command</p>
-<p><code>sudo apt update -y &amp;&amp; sudo apt upgrade -y</code></p>
-<p>After updating the packages, we need to now install ansible to run our playbook. Use the below command to install ansible</p>
-<p><code>sudo apt install ansible -y</code></p>
-<p>Now clone the github repository using below command</p>
-<p><code>git clone https://github.com/dKm10/wsl-ubuntu-setup.git</code></p>
-<p>Change your directory to the devsetup folder within this repo and run the ansible playbook using below command. Enter the sudo password when prompted</p>
-<p><code>ansible-playbook -K playbook.yml</code></p>
-<p>Even though you can run this playbook on an already running instance of WSL Ubuntu, for best results I recommend running this as soon as you have launched your distro for the first time.</p>
+          <p>You might come across situation where you want to add some certificates in your WSL instance to fix any SSL issues.
+You need to first copy your certificates to the location <code>/usr/local/share/ca-certificates</code> and then run the command <code>sudo update-ca-certificates</code></p>
+<h3 id="things-to-remember">Things to Remember</h3>
+<ul>
+<li>While exporting the certificates, make sure you select the base64 encoded option. (DER encoded doesnt seem to work for me)</li>
+<li>When copying the certificates to wsl, change the extension to crt</li>
+</ul>
 
         </section>
       </div>
