@@ -2,9 +2,9 @@
 <html lang="en-us">
   <head><link rel="icon" href="/favicon_main.svg"><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta property="og:url"  content="https://dkm10.github.io/devops/roadmap/" />
-    <meta property="og:type" content="article" /><meta property="og:title" content="Roadmap" /><meta property="og:description" content="Roadmap to learning DevOps" /><meta property="og:image:width"  content="375" />
-        <meta property="og:image:height" content="250" /><meta property="og:image" content="https://dkm10.github.io/images/default_summary_hu3efed0aef410d547b50a5d76aed712c3_1591773_600x0_resize_q75_box.jpg" /><title>Tech Blogs by dKm! - Roadmap</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge" /><meta property="og:url"  content="https://dkm10.github.io/devops/wsl/git-signed-commits/" />
+    <meta property="og:type" content="article" /><meta property="og:title" content="Signing Git commits WSL/2" /><meta property="og:description" content="Signing your git commits for enhanced security" /><meta property="og:image:width"  content="375" />
+        <meta property="og:image:height" content="250" /><meta property="og:image" content="https://dkm10.github.io/images/default_summary_hu3efed0aef410d547b50a5d76aed712c3_1591773_600x0_resize_q75_box.jpg" /><title>Tech Blogs by dKm! - Signing Git commits WSL/2</title>
 
     
 <link href="https://fonts.googleapis.com/css?family=Open&#43;Sans" rel="stylesheet">
@@ -135,64 +135,67 @@
   <div class="container">
     <div class="columns">
       <div class="column is-centered-tablet-portrait">
-        <h1 class="title is-2 section-title">Roadmap</h1>
+        <h1 class="title is-2 section-title">Signing Git commits WSL/2</h1>
         <h5 class="subtitle is-5 is-muted"></h5>
         <div class="divider"></div>
         
         <section class="section content has-text-justified">
-          <p>Interested in learning DevOps but confused where to get started ? This might just help you with a few ideas! <!-- raw HTML omitted --></p>
-<p>Coming from a sysadmin background, most of my DevOps tasks are related to platform management and provisioning, primarily on Azure cloud. <!-- raw HTML omitted --></p>
-<p>There are few basic concepts that you should get familiar with before starting your journey in DevOps. Getting comfortable with these concepts will make your life much easier in the DevOps world.</p>
+          <p>As part of my workflow I regularly make commits to git repositories, be it GitHub or Azure Repos. I also realized how easy it is to spoof a commit in git.
+Having a signed commit is best way to make sure the commits are coming from a authenticated and genuine source. This article will guide you through the steps to setup signed commits in git using gpg keys.
+This is tested on Ubuntu 18.04 and Ubuntu 20.04</p>
+<h2 id="pre-requisites">Pre-Requisites</h2>
+<p>Before we get started, we need below packages in our system to make this thing work.</p>
 <ul>
-<li>Source Control Management (SCM)
-<ul>
-<li>Preffered tool (Git) , Other tools (SVN,TFS,Mercurial)</li>
-<li>Basics of Git
-<ul>
-<li>working with branches</li>
-<li>pull requests and merges</li>
-<li>branch policies</li>
+<li>build-essential</li>
+<li>apt-transport-https</li>
+<li>software-properties-common</li>
+<li>ca-certificates</li>
+<li>curl</li>
+<li>git</li>
+<li>gpg</li>
+<li>gnupg</li>
+<li>gpg-agent</li>
+<li>pinentry-curses</li>
 </ul>
+<p>Most packages would be already installed, just install any package that is missing from your system.</p>
+<ul>
+<li>Generate GPG keys using the following command. When prompted for name and email address, make sure to use your Git/GitHub name and email address</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gpg --full-generate-key
+</code></pre></div><ul>
+<li>
+<p>List the key using <code>gpg --list-keys</code></p>
+</li>
+<li>
+<p>Export the key using the below command. Public key needs to be imported in GitHub/Git</p>
 </li>
 </ul>
-</li>
-<li>Infrastructure as Code (IaC)
+<pre><code>gpg --export --armor &lt;email&gt;
+</code></pre><ul>
+<li>Configure Git to use your gpg keys</li>
+</ul>
+<pre><code>git config --global user.signingkey &lt;&lt; YOUR KEY ID &gt;&gt;
+git config --global commit.gpgsign true
+</code></pre><ul>
+<li>
+<p>Configue GPG to cache password for your current session, else you will be prompted to unlock the key everytime git tries to sign the commit.</p>
 <ul>
-<li>Preffered provisioning tool (Terraform) , Other tools (ARM Templates, Bicep)</li>
-<li>Basics of Terraform
-<ul>
-<li>Terraform providers</li>
-<li>Backend</li>
-<li>Variables, Loops, etc</li>
-<li>Modules</li>
+<li>Create a file ~/.gnupg/gpg-agent.conf and add below lines
+<pre><code>default-cache-ttl 86400
+max-cache-ttl 86400
+</code></pre></li>
+<li>Create a file ~/.gnupg/gpg.conf and below lines to tell GPG to use agent for caching password
+<pre><code># Uncomment within config (or add this line)
+# This tells gpg to use the gpg-agent
+use-agent
+</code></pre></li>
 </ul>
 </li>
-<li>Preffered configuration tool (Ansible) , Other tools (Salt, Chef, Puppet)</li>
-<li>Basics of Ansible
-<ul>
-<li>Understanding YAML data structure</li>
-<li>Playbook</li>
-<li>Roles</li>
-</ul>
+<li>
+<p>GPG might not be aware of which terminal to use for password prompt. Add the below line in your ~/.profile or ~/.bashrc to make GPG aware of the terminal
+<code>export GPG_TTY=$(tty) </code></p>
 </li>
 </ul>
-</li>
-<li>Scripting tool
-<ul>
-<li>Preffered tools (PowerShell, Bash, Python)</li>
-<li>Understanding the requirement and designing the workflow</li>
-</ul>
-</li>
-<li>Continous Integration/Continous Deployment (CI/CD)
-<ul>
-<li>Preffered tools (Azure DevOps) , Other tools (GitHub actions, Jenkins)</li>
-<li>Understanding the concepts of pipelines</li>
-<li>Pipeline as code (YAML structure)</li>
-</ul>
-</li>
-</ul>
-<p>After getting familiar with the above topics, you will find yourself in a much better space working in DevOps.
-Hope this helps!!!</p>
 
         </section>
       </div>
