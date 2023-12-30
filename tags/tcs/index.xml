@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TCS on Deepak Kumar Mahana</title>
+    <link>https://dkm10.github.io/tags/tcs/</link>
+    <description>Recent content in TCS on Deepak Kumar Mahana</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Mar 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://dkm10.github.io/tags/tcs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tata Consultancy Services</title>
+      <link>https://dkm10.github.io/experience/tcs/</link>
+      <pubDate>Sun, 15 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://dkm10.github.io/experience/tcs/</guid>
+      <description>Joined Tata Consultancy Services as a fresher in March 2015. Started as a Windows Server Administrator and gradually worked towards Cloud Infrastructure. Worked across various teams and technologies. Few roles and responisbilities during my journey in TCS
+Cloud &amp;amp; DevOps Engineer  Setup RBAC roles for multiple scopes in Azure (subscription/resource group/resources) using groups. Create PowerShell scripts to build multiple VMs in Azure. Create ARM Templates to standardize builds in Azure.</description>
+    </item>
+    
+  </channel>
+</rss>

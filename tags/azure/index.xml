@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure on Deepak Kumar Mahana</title>
+    <link>https://dkm10.github.io/tags/azure/</link>
+    <description>Recent content in Azure on Deepak Kumar Mahana</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://dkm10.github.io/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Monitoring | Log Analytics</title>
+      <link>https://dkm10.github.io/projects/azure-monitoring/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dkm10.github.io/projects/azure-monitoring/</guid>
+      <description>In a hub-spoke model, different application workloads were deployed to spoke subscriptions. All the VMs in spoke subscriptions has to be connected to central Log Analytics Workspace in the hub subscription.
+To achieve this, the first requirement was to collect information about the log analytics workspace the VMs are currently connected to. Azure Resource Graph Query was used to fetch the extextension details of VMs and in turn collecting the details of Log Analytics Workspace these VMs are connected to.</description>
+    </item>
+    
+  </channel>
+</rss>

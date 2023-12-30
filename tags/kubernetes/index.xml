@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on Deepak Kumar Mahana</title>
+    <link>https://dkm10.github.io/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Deepak Kumar Mahana</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 25 Oct 2023 17:53:00 +0530</lastBuildDate><atom:link href="https://dkm10.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microservices | AKS | Terraform | Azure DevOps</title>
+      <link>https://dkm10.github.io/projects/microservices/</link>
+      <pubDate>Wed, 25 Oct 2023 17:53:00 +0530</pubDate>
+      
+      <guid>https://dkm10.github.io/projects/microservices/</guid>
+      <description>Working on a project where multiple applications are getting deployed as containers. AKS is used as the container orchestration platform, Azure Container Registry (ACR) is used to store the container images. Container images are built using Docker. Build pipeline is created in Azure DevOps and jobs are run using Self-Hosted Linux Agent server.
+Below Infrastructure components were created using Terraform
+ Azure Linux VM (RHEL) Azure Data Factory Azure Windows VM(Self Hosted Integration Runtime for ADF) Azure Cosmos DB (PGSQL) Azure Storage Account Azure Container Registry Private Endpoints for ACR,Storage Account, PGSQL, ADF Azure Key Vault Private Azure Kubernetes Cluster with Application Gateway Ingress Controller and Key Vault Integration  Linux VM was configured as Self-Hosted Agent server to run Azure DevOps pipeline for building Docker images.</description>
+    </item>
+    
+  </channel>
+</rss>

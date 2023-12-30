@@ -17,26 +17,26 @@
     
 
     
-    <title>DevOps</title>
-    <meta name="description" content="Cloud &amp; DevOps Engineer">
-    <meta name="keywords" content='blog, gokarna, hugo'>
+    <title>Azure Monitoring | Log Analytics</title>
+    <meta name="description" content="Implement monitoring solution for workloads in Azure using Log Analytics">
+    <meta name="keywords" content='blog, gokarna, hugo, Azure, Monitoring, Log Aanlytics, PowerShell'>
 
-    <meta property="og:url" content="https://dkm10.github.io/tags/devops/">
+    <meta property="og:url" content="https://dkm10.github.io/projects/azure-monitoring/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="DevOps">
-    <meta property="og:description" content="Cloud &amp; DevOps Engineer">
+    <meta property="og:title" content="Azure Monitoring | Log Analytics">
+    <meta property="og:description" content="Implement monitoring solution for workloads in Azure using Log Analytics">
     <meta property="og:image" content="https://dkm10.github.io/images/profile.jpg">
     <meta property="og:image:secure_url" content="https://dkm10.github.io/images/profile.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DevOps">
-    <meta name="twitter:description" content="Cloud &amp; DevOps Engineer">
-    <meta property="twitter:domain" content="https://dkm10.github.io/tags/devops/">
-    <meta property="twitter:url" content="https://dkm10.github.io/tags/devops/">
+    <meta name="twitter:title" content="Azure Monitoring | Log Analytics">
+    <meta name="twitter:description" content="Implement monitoring solution for workloads in Azure using Log Analytics">
+    <meta property="twitter:domain" content="https://dkm10.github.io/projects/azure-monitoring/">
+    <meta property="twitter:url" content="https://dkm10.github.io/projects/azure-monitoring/">
     <meta name="twitter:image" content="https://dkm10.github.io/images/profile.jpg">
 
     
-    <link rel="canonical" href="https://dkm10.github.io/tags/devops/" />
+    <link rel="canonical" href="https://dkm10.github.io/projects/azure-monitoring/" />
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -157,22 +157,84 @@
     </nav>
 </header>
 <main id="content">
-    <div class="container list-posts">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Azure Monitoring | Log Analytics</h1>
+        <small role="doc-subtitle">Implement monitoring solution for workloads in Azure using Log Analytics</small>
+        <p class="post-date">February 10, 2023
+        
+        </p>
 
-    <h1 class="list-title">DevOps</h1>
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="https://dkm10.github.io/tags/azure">Azure</a></li>
+        
+            <li class="post-tag"><a href="https://dkm10.github.io/tags/monitoring">Monitoring</a></li>
+        
+            <li class="post-tag"><a href="https://dkm10.github.io/tags/log-aanlytics">Log Aanlytics</a></li>
+        
+            <li class="post-tag"><a href="https://dkm10.github.io/tags/powershell">PowerShell</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>In a hub-spoke model, different application workloads were deployed to spoke subscriptions. All the VMs in spoke subscriptions has to be connected to central Log Analytics Workspace in the hub subscription.</p>
+<p>To achieve this, the first requirement was to collect information about the log analytics workspace the VMs are currently connected to. Azure Resource Graph Query was used to fetch the extextension details of VMs and in turn collecting the details of Log Analytics Workspace these VMs are connected to.</p>
+<p>Based on the result from Resource Graph Query, a csv input file was created which was then passed to a PowerShell script that automatically set the correct workspace across all VMs in spoke subscriptions.</p>
+
+        </p>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
 
     
-
-    <h2 class="posts-year">2023</h2><article class="post-title">
-    <a href="https://dkm10.github.io/projects/microservices/" class="post-link">Microservices | AKS | Terraform | Azure DevOps</a>
-    <div class="flex-break"></div>
-    <span class="post-date">October 25, 2023</span>
-</article>
-
     
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
 
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
 </div>
 
+
+
+    
 
         </main><footer class="footer">
     

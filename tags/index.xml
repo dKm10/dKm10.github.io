@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Deepak Kumar Mahana</title>
+    <link>https://dkm10.github.io/tags/</link>
+    <description>Recent content in Tags on Deepak Kumar Mahana</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 25 Oct 2023 17:53:00 +0530</lastBuildDate><atom:link href="https://dkm10.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevOps</title>
+      <link>https://dkm10.github.io/tags/devops/</link>
+      <pubDate>Wed, 25 Oct 2023 17:53:00 +0530</pubDate>
+      
+      <guid>https://dkm10.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://dkm10.github.io/tags/kubernetes/</link>
+      <pubDate>Wed, 25 Oct 2023 17:53:00 +0530</pubDate>
+      
+      <guid>https://dkm10.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure</title>
+      <link>https://dkm10.github.io/tags/azure/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dkm10.github.io/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Log Aanlytics</title>
+      <link>https://dkm10.github.io/tags/log-aanlytics/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dkm10.github.io/tags/log-aanlytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monitoring</title>
+      <link>https://dkm10.github.io/tags/monitoring/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dkm10.github.io/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>https://dkm10.github.io/tags/powershell/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dkm10.github.io/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Experience</title>
+      <link>https://dkm10.github.io/tags/experience/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dkm10.github.io/tags/experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wipro</title>
+      <link>https://dkm10.github.io/tags/wipro/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dkm10.github.io/tags/wipro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TCS</title>
+      <link>https://dkm10.github.io/tags/tcs/</link>
+      <pubDate>Sun, 15 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://dkm10.github.io/tags/tcs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

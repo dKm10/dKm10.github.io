@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wipro on Deepak Kumar Mahana</title>
+    <link>https://dkm10.github.io/tags/wipro/</link>
+    <description>Recent content in Wipro on Deepak Kumar Mahana</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dkm10.github.io/tags/wipro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wipro Technologies</title>
+      <link>https://dkm10.github.io/experience/wipro/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dkm10.github.io/experience/wipro/</guid>
+      <description>Joined Wipro Technologies in October 2021 as a Cloud &amp;amp; DevOps Engineer in the Hybrid Platform Team. This team is responsible for managing infrastructure in both on-premise and cloud. Some responsiblities as part of this roles are:
+ Managing over 120+ subscriptions in Azure using Terraform (Open Source) and Azure Repos as central repository for management Build and Support Infrastructure services like Virtual Machines, Storage, Virtual Network, Log Analytics, Automation Account, Kubernetes Cluster, Container Registry Create and manage DevOps pipelines for continuous management of infra services using Infrastructure as Code.</description>
+    </item>
+    
+  </channel>
+</rss>
